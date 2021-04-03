@@ -16,15 +16,17 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     channel = bot.get_channel(827844482983657482)
-    await channel.send(f'{member} 加入了!歡迎//')
+    await channel.send(f'{member} join!')
     
 @bot.event
 async def on_member_remove(member):
     channel = bot.get_channel(827844482983657482)
-    await channel.send(f'{member} 離開了OAO!')
+    await channel.send(f'{member} leave!')
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send(F'{round(bot.latency*1000)} (ms)')
+    await ctx.send(f'{round(bot.latency*1000)} (ms)')
+
+
 
 bot.run('ODI3NTkzNTIzMjQyNzI5NDky.YGdShw.RwDaLuoBC1ZHeab983FLeSYYgXI')
